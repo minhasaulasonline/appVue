@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Primeiro Vue</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+
+    <div id='app1'>
+
+        <div id='div2'>
+            <p>testando css</p>
+        </div>
+        <a>ancora</a>
+        <div id="div-tab">
+            <p> teste</p>
+        </div>
+        <ul>
+            <li v-for='n in 10' v-if="n % 2 ===0"> 5 X {{n}}= {{n*5}} </li>
+
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="primeirovue.js" type="text/javascript" charset="utf-8" async defer></script>
+
+</body>
