@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Primeiro Vue</title>
+    <link rel="stylesheet" href="./primeirovue\styles.css">
+</head>
+
+<body>
+
+    <div id='app1'>
+        <h2 id='parag1'>Trabalhando com Vue</h2>
+
+        <!--Trabalando com Filters-->
+
+        <div style="background-color:lavender">
+            <p>trabalhando com filters, ao clicar no btn as vogais serão removidas</p>
+            {{ text|myfilters(teste)}} {{teste}}<br>
+            <button v-on:click="estado()"> Click </button>
+        </div>
+
+        <!--trabalhando com v-if para sumir um objeto-->
+
+        <p> usando a funçao v-if para sumir um componente</p>
+
+</html>
+</br>
+
+{{teste2}}
+
+<button v-on:click="fteste2()">Sumir</button>
+
+<!--usando o For-->
+
+<ul v-if="teste2">
+    <li v-for='n in 10' v-if="n % 2 ===0"> 5 X {{n}} = {{n*5}} </li>
+
+</ul>
+
+<div style="background-color: blanchedalmond;">
+    <p> Usando o Submit</p>
+
+    <center>
+        <p> Aqui aparece o que vc escreve</p>
+        </br>
+        {{teste3}}
+    </center>
+    <input v-model="teste3" placeholder=""> </input>
+    </br>
+    </br>
+</div>
+<div style="background-color:darkgray">
+    <p>Trabalhando com diretivas</p>
+    <ul>
+        <li v-for='n in teste4' v-bind:var4="n" v-bind:var4b="n.key">{{n.key}}---{{n.value}} </li>
+    </ul>
+
+</div>
+<div style="background-color: darkgray;">
+    <img style="position: fixed; top: 50%; left:0%;transform: translateY(-50%); z-index: -100; width: 100%; opacity: 0.5;" src="https://www.w3schools.com/css/img_5terre.jpg">
+    <h4>
+        <p v-bind:title='teste3'> Criando componentes e usando diretivas</p>
+    </h4>
+    <ol>
+        <my-component v-for='a in teste4b' v-bind:valor='a.value'> </my-component>
+    </ol>
+</div>
+
+</div>
+<script src=" https://unpkg.com/vue/dist/vue.js "></script>
+<script src=" ./primeiroVue\primeirovue.js " type="text/javascript " charset="utf-8 " async defer></script>
+
+</body>
