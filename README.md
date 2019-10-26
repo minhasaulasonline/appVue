@@ -1,2 +1,0 @@
-# appVue
-aplicação usando Vue
