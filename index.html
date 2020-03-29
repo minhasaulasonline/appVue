@@ -8,113 +8,27 @@
 </head>
 
 <body>
-    <div id='app1'>
-        <h2 id='parag1'>Aprendendo Vue</h2>
+    
+    <h2>usando a camera</h2>
+    <button onclick="loadCamera()" class="cute-button">
+        <img draggable="false" role="img" class="emoji" alt="📸" src="https://s.w.org/images/core/emoji/12.0.0-1/svg/1f4f8.svg"> Clique aqui para visualizar a Webcam</button>
+    <div class="area">
+        <video autoplay="true" id="webCamera">
+        </video>
 
-        <!--Trabalando com Filters-->
+        <input type="text" id="base_img" name="base_img" />
+        <button type="button" onclick="takeSnapShot()">Tirar foto e salvar</button>
 
-        <div style="background-color:lavender">
-            <p>trabalhando com filters, ao clicar no btn as vogais serão removidas</p>
-            {{ text|myfilters(teste)}} {{teste}}<br>
-            <button v-on:click="estado()"> Click </button>
-            <button v-on:click=" valor+=2 ">ok </button> {{valor}}
-            <button v-on:click="$emit('click')">emit</button>
-            <p>Hora de usar o ecutador watch</p>
-            <input v-model="question" v-on:keyup.enter='estado'> </input>
-
-
-            <h2>{{question}}</h2>
-            </br>
-            {{answer}}
-        </div>
-
-        <!--trabalhando com v-if para sumir um objeto-->
-
-        <p> usando a funçao v-if para sumir um componente</p>
-        </br>
-        {{teste2}}
-
-        <button v-on:click="fteste2()">Sumir</button>
-
-        <!--usando o For-->
-
-        <ul v-if="teste2">
-            <li v-for='n in 10' v-if="n % 2 ===0"> 5 X {{n}} = {{n*5}} </li>
-
-        </ul>
-
-        <div style="background-color: blanchedalmond;">
-            <p> Usando o Submit</p>
-
-            <center>
-                <p> Aqui aparece o que vc escreve</p>
-                </br>
-                {{teste3}}
-            </center>
-            <input v-model="teste3" placeholder=""> </input>
-            </br>
-            </br>
-        </div>
-        <div style="background-color:darkgray">
-            <p>Trabalhando com diretivas</p>
-
-            <ul>
-                <li v-for='n in teste4' v-bind:var4="n" v-bind:var4b="n.key">{{n.key}}---{{n.value}} </li>
-            </ul>
-
-        </div>
-        <div style="background-color: darkgray;">
-            <img style="position: fixed; top: 50%; left:0%;transform: translateY(-50%); z-index: -100; width: 100%; opacity: 0.5;" src="https://i.ibb.co/kXdsrV3/E-m-c.jpg" alt="E-m-c">
-            <h4>
-                <p v-bind:title='teste3'> Criando componentes e usando diretivas</p>
-            </h4>
-            <ol>
-                <my-component v-for='a in teste4' v-bind:valor='a.value'> </my-component>
-            </ol>
-        </div>
-
-        <div id='usandoslot' style="background-color:lightgray;">
-            <ul>
-                <my-component v-for='d in 2' valor=d>
-                    fora do padrão
-                </my-component>
-            </ul>
-
-            <my-comp2>
-
-                <template scope="props">    
-                    <p> slot sem nome---{{props.compText}} </p>
-               </template>
-
-                <p> segundo slot sem nome---{{comp2c}}</p>
-                <p slot='slot1'> passando no slot 1 </p>
-                <p slot='slot2'> passando no slot 2</p>
-                <template scope='prop'>
-                    <p> {{prop.comp3cb}} </p>
-               </template>
-
-            </my-comp2>
-        </div>
-        <div v-bind:resultado='resultado' style="background-color: lightblue;">
-
-            <p> Uma pausa para rever debouse, não deu certo...rever debounce</p>
-            </br>
-            {{resultado}}</br>
-            <button v-on:click="debounce(result,3000)">start</button>
-        </div>
-
-        <div style="background-color: bisque;">
-            <p>revendo diretiva</p>
-            <input v-my-rotate type="text"> </input>
-
-        </div>
-
-
-        <!--Dive do container-->
+        <img id="imagemConvertida" />
+        <p id="caminhoImagem" class="caminho-imagem">
+            <a href="" target="_blank"></a>
+        </p>
+        <script src="scriptcam.js"></script>
     </div>
-    <script src=" https://unpkg.com/vue/dist/vue.js "></script>
-    <script src=" ../primeiroVue\primeirovue.js " type="text/javascript " charset="utf-8 " async defer></script>
 
+
+
+    <h2> testando</h2>
 </body>
 
 </html>
