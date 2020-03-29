@@ -1,4 +1,4 @@
-function loadCamera() {
+function openCam() {
     //Captura elemento de vídeo
     var video = document.querySelector("#webCamera");
     //As opções abaixo são necessárias para o funcionamento correto no iOS
